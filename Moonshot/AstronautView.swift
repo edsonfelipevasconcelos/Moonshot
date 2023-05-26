@@ -34,6 +34,7 @@ struct AstronautView: View {
                 Image(self.astronaut.id)
                     .resizable()
                     .scaledToFit()
+                    .accessibilityHidden(true)
                 ForEach(self.missionsFlown, id: \.self) { mission in
                     VStack {
                         Text(mission.description)

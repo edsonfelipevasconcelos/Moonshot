@@ -37,6 +37,7 @@ struct MissionView: View {
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.6)
                         .padding(.top)
+                        .accessibilityHidden(true)
                     Text(mission.formattedLaunchDateMission)
                         .font(.headline)
                         .padding(.bottom)
@@ -87,8 +88,9 @@ struct MissionView: View {
                 .padding(.bottom)
             }
         }
-        .navigationTitle(mission.displayName)
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitle(Text(mission.displayName), displayMode: .inline)
+//        .navigationTitle(mission.displayName)
+//        .navigationBarTitleDisplayMode(.inline)
         .background(.darkBackground)
         .preferredColorScheme(.dark)
     }

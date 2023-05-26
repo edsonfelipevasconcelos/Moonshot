@@ -16,13 +16,14 @@ struct ContentView: View {
                 if showingGrid {
                     MissionGridView()
                 } else {
-                    MissionListView()
+                    AstronautGridView()
                 }
             }
+            .navigationTitle("Moonshot")
             .navigationBarItems(trailing: Button(action: {
                 showingGrid.toggle()
             }, label: {
-                Text(showingGrid ? "List" : "Grid")
+                Text(showingGrid ? "Astronauts" : "Missions")
             }))
         }
     }
